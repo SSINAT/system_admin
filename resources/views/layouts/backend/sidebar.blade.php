@@ -43,8 +43,8 @@
 
         <li class="sidebar-title">Tools Admin</li>
 
-        <li class="sidebar-item {{ request()->is('admin/cities') ? 'active' : '' }}">
-            <a href="https://wa.me/6281912488040" target="__blank" class='sidebar-link'>
+        <li class="sidebar-item {{ request()->is('admin/user*') ? 'active' : '' }}">
+            <a href="{{ route('admin.user.index') }}" class='sidebar-link'>
                 <i class="bi bi-person-lines-fill"></i>
                 <span>Daftar User</span>
             </a>

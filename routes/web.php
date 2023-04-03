@@ -31,4 +31,10 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         'as' => 'admin',
         'only' => ['index', 'edit', 'store', 'destroy', 'create', 'update']
     ]);
+
+    // user route
+    Route::resource('user', App\Http\Controllers\Backend\UserController::class, [
+        'as' => 'admin',
+        'only' => ['index', 'edit', 'store', 'destroy', 'create', 'update']
+    ]);
 });

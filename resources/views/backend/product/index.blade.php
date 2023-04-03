@@ -116,7 +116,7 @@
                     </div>
                     <nav aria-label="Page navigation example">
                         <ul class="pagination pagination-primary justify-content-center">
-                            <li class="page-item disabled">
+                            {{-- <li class="page-item disabled">
                                 <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
                             </li>
                             <li class="page-item active">
@@ -130,7 +130,8 @@
                             </li>
                             <li class="page-item">
                                 <a class="page-link" href="#">Next</a>
-                            </li>
+                            </li> --}}
+                            {!! $data->links() !!}
                         </ul>
                     </nav>
                 </div>
