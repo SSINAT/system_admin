@@ -24,5 +24,11 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::prefix('admin')->middleware('auth')->group(function () {
-    Route::get('', IndexController::class);
+    Route::get('', IndexController::class)->name('admin');
+
+    // route product
+    Route::resource('product', App\Http\Controllers\Backend\ProductController::class, [
+        'as' => 'admin',
+        'only' => ['index', 'edit', 'store', 'destroy', 'create', 'update']
+    ]);
 });

@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('price');
             $table->string('image');
             $table->longText('body');
+            $table->enum('status', ['draft', 'publish']);
             $table->timestamps();
         });
     }
