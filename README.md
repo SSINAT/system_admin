@@ -21,6 +21,7 @@ Credit Link
 - php artisan key:generate
 - Setup Your Database Postgre in .env database name, password, user
 - php artisan migrate --seed
+- Service & Repository Patern
 
 ## Code of Conduct
 
